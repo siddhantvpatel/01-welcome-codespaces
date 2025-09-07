@@ -28,10 +28,10 @@
             position: absolute; /* place it on top of hero */
             top: 0;
             left: 0;
-            width: 100%;
+            width: 80%;
             display: flex;
             align-items: center;
-            padding: 20px 40px;
+            padding: 20px;
             justify-content: flex-start;
             background: transparent; /* remove the white background */
             z-index: 10; /* keeps logo above hero image */
@@ -74,7 +74,7 @@
                 left: 0;
                 right: 0;
                 bottom: 0;
-                background: rgba(0, 0, 0, 0.4); /* semi-transparent black */
+                background: rgba(0, 0, 0, 0.4);
                 z-index: 0;
             }
 
@@ -82,8 +82,6 @@
                 position: relative;
                 z-index: 1;
             }
-
-
 
             .hero img {
                 width: 100%;
@@ -101,17 +99,18 @@
             }
 
         .hero-content {
-            max-width: 500px; /* prevents text from spreading too wide */
-            margin-left: 40px; /* moves content inward from the left edge */
+            max-width: 500px;
+            margin-left: 40px;
         }
+
         .hero-credit {
             position: absolute;
             bottom: 10px;
             left: 15px;
             font-size: 1rem;
-            color: rgba(255, 255, 255, 0.8); /* white but slightly transparent */
+            color: rgba(255, 255, 255, 0.8);
             margin: 0;
-            z-index: 2; /* ensures it shows above overlay */
+            z-index: 2;
         }
 
         .btn {
@@ -121,20 +120,23 @@
             font-weight: bold;
             text-decoration: none;
         }
-
+        
         .btn-yellow {
             background: #ffc908;
             color: #111;
+            margin-top: 17px;
         }
 
         .btn-blue {
-            background: #0070c9;
+            background: #0492a0;
             color: #fff;
+            margin: 32px;
         }
 
         .btn-orange {
-            background: #ff7f50;
-            color: #fff;
+            background: #ffd9c2;
+            color: #1a1a1a;
+            margin-top: 10px;
         }
 
         .section {
@@ -150,30 +152,43 @@
             margin-top: 30px;
         }
 
-        .card {
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            border: 1px solid #ddd;
-        }
-
         .card-textcenter {
-            background: #fff;
+            background: #1a1a1a;
+            color: white;
+            min-height: 320px;
             padding: 20px;
             border-radius: 8px;
             border: 1px solid #ddd;
             text-align: center;
         }
 
+        .Column-Heading {
+            margin: 5px;
+            position: relative;
+            top: 5px;
+            bottom: 5px;
+        }
+
         .card h2 {
             margin-top: 0;
+        }
+
+        .spring-logo {
+            display: block;
+            margin: 10px auto;
+            height: 70px;
+            width: auto;
+            position: relative;
+            top: 0px;
+            left: 0;
+            bottom: 30px;
         }
 
         .link-underline {
             display: block;
             margin-top: 8px;
             text-decoration: underline;
-            color: #333;
+            color: #ffd9c2;
         }
 
         .well {
@@ -210,8 +225,6 @@
                 opacity: 1;
                 transform: translateY(0);
             }
-
-
     </style>
 </head>
 <body>
@@ -242,19 +255,21 @@
     <section class="section fade-in">
         <div class="three-col">
             <div class="card-textcenter">
-                <h2>The Spring</h2>
-                <p>When you give to charity: water, 100% of your donation goes directly to bringing clean water solutions to rural communities.</p>
+                <img src="./Images/TheSpring.png" 
+                     alt="The Spring Logo" 
+                     class="spring-logo">
+                <p>When you give to charity: water, 100% of your donation goes directly to bringing clean water solutions to rural communities. We won’t stop until everyone, everywhere has access to clean water. The Spring helps us do just that.</p>
                 <a class="btn btn-blue" href="https://www.charitywater.org/donate/the-spring" target="_blank">Join The Spring</a>
             </div>
             <div class="card-textcenter">
-                <h2>Fundraise for Clean Water</h2>
-                <p>From lemonade stands to ukulele pop-up concerts and everything in between, we’ve seen fundraisers do incredible things for clean water.</p>
+                <h2 class="Column-Heading" style="color: #ffd9c2; font-size: 30px">Fundraise for Clean Water</h2>
+                <p>From lemonade stands to ukulele pop-up concerts and everything in between, we’ve seen fundraisers do incredible things for clean water. 100% of the money raised will directly fund clean water projects that help families around the world.</p>
                 <a class="btn btn-orange" href="https://www.charitywater.org/fundraise" target="_blank">Start Your Fundraiser</a>
                 <a class="link-underline" href="https://www.charitywater.org/fundraise#find-a-campaign" target="_blank">Or find a campaign</a>
             </div>
             <div class="card-textcenter">
-                <h2>Experience Lab</h2>
-                <p>The Experience Lab is an immersive exhibit for the search for water and the work of charity: water. Free but reservations are required.</p>
+                <img src="./Images/ExpLab.jpg" style="height: 110px">
+                <p>The Experience Lab is an immersive storytelling exhibit about humanity’s search for water and the work of charity: water — a non-profit organization working to bring clean and safe water to every person on the planet.</p>
                 <a class="btn btn-yellow" href="https://www.charitywater.org/experience" target="_blank">Plan Your Visit</a>
             </div>
         </div>
@@ -277,6 +292,7 @@
                 The 100% Model is powered by a small and dedicated group of private donors, known as The Well. From day one, we’ve relied on The Well to fund all of our operating expenses. It’s not always easy, but it’s an approach we believe in deeply. And year after year, our commitment to transparency inspires support from passionate donors, enthusiastic fundraisers, long-standing brand partners, and loyal volunteers who believe—like we do—that clean water truly changes everything.
             </p>
         </div>
+        <p class="hero-credit"> Photo: TaraShupePhotography</p>
         <img src="./Images/charity_water_Tanzania_TaraShupePhotography.jpg"
              alt="Child playing with water">
     </section>
@@ -284,9 +300,9 @@
 
     <!-- Impact Section -->
     <section class="section fade-in" style="text-align: center">
-        <h2>Know that your donations are making a difference</h2>
-        <p>charity: water uses 100% of your donation to fund clean water around the world and then proves every single project you fund, complete with GPS coordinates and photos.</p>
-        <img src="https://via.placeholder.com/800x400.png?text=World+Map" alt="Impact map showing projects">
+        <h2 style="font-size: 40px">Know that your donations are making a difference</h2>
+        <p style="font-size: 20px">charity: water uses 100% of your donation to fund clean water around the world and then proves every single project you fund, complete with GPS coordinates and photos.</p>
+        <img src="./Images/DonoMap.png" alt="Impact map showing projects" style="height:600px; width:auto">
     </section>
 
     <!-- Newsletter Signup Section -->
@@ -295,21 +311,21 @@
         <p>Get our emails to stay in the know.</p>
         <form onsubmit="event.preventDefault(); alert('Thanks for subscribing! (Demo only)')">
             <div style="margin-bottom:15px;">
+
                 <input type="text" placeholder="First Name"
-                       style="padding:12px; width:48%; margin-right:2%; border:1px solid #ccc; border-radius:6px;">
+                       style="padding:10px; width:15%; border:1px solid #ccc; border-radius:6px;">
                 <input type="text" placeholder="Last Name"
-                       style="padding:12px; width:48%; border:1px solid #ccc; border-radius:6px;">
-            </div>
-            <div style="margin-bottom:15px;">
+                       style="padding:10px; width:15%; border:1px solid #ccc; border-radius:6px;">
+
                 <input type="email" placeholder="Email Address" required
-                       style="padding:12px; width:48%; border:1px solid #ccc; border-radius:6px;">
+                       style="padding:10px; width:35%; border:1px solid #ccc; border-radius:6px;">
+                <button type="submit" class="btn btn-yellow">Subscribe</button>
             </div>
             <div style="margin-bottom:15px;">
                 <label style="font-size:0.9rem;">
                     <input type="checkbox"> Yes! I’d like to receive charity: water emails and help change lives.
                 </label>
             </div>
-            <button type="submit" class="btn btn-yellow">Subscribe</button>
         </form>
     </section>
 
